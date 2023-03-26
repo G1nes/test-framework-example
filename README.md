@@ -1,5 +1,9 @@
 # test-framework-example
 
+In order to authorize in UI tests you should set ENV variables:
+USER_EMAIL
+USER_PASSWORD
+
 UI tests
 
 Requirements for 1 and 2 tests: Should be realized in one test-class
