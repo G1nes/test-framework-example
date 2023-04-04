@@ -12,7 +12,7 @@ public class EnterPasswordWindow {
 
     public EnterPasswordWindow() {
         passwordInput = $x("//input[@data-testid='UI_KIT_INPUT' and @placeholder='Password']");
-        loginButton = $x("//div[@class='s11197' and contains(text(), 'Log in')]");
+        loginButton = $x("//div[contains(text(), 'Log in')]");
     }
 
     public EnterPasswordWindow fillPassword(String password) {

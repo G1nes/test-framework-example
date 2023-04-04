@@ -1,7 +1,6 @@
 package com.example.ui.pages.shopping.elements;
 
-import com.codeborne.selenide.ElementsCollection;
-import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -19,9 +18,11 @@ public class ShoppingListElements {
         SelenideElement shoppingList = elements.asDynamicIterable()
                 .stream()
                 .findFirst()
-                .orElseThrow(() -> new IllegalStateException("There are no shooping lists"));
+                .orElseThrow(() -> new IllegalStateException("There are no shopping lists"));
         shoppingList.$x(".//button[*[@data-testid='3dotsHorizontal']]").click();
-        return new DataPopper($x("//div[@class='s16']"));
+        SelenideElement dataPopper = $x("//div[@class='s16']");
+        dataPopper.shouldBe(Condition.visible);
+        return new DataPopper(dataPopper);
     }
 
     public List<String> getShoppingListNames() {

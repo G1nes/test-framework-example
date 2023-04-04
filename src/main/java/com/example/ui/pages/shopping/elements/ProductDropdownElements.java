@@ -15,7 +15,7 @@ public class ProductDropdownElements {
     }
 
     private SelenideElement findProductElementByName(String productName) {
-        String elementNameXpath = ".//span[@class='s11550']";
+        String elementNameXpath = ".//span[@data-testid='shopping-list-item-name']";
         return elements.asDynamicIterable()
                 .stream()
                 .filter(element -> productName.equals(element.$x(elementNameXpath).getText()))

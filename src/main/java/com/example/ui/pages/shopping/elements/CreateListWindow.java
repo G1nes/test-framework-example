@@ -10,7 +10,7 @@ public class CreateListWindow {
     private final SelenideElement createButton;
 
     public CreateListWindow() {
-        createButton = $x("//div[@class='s11197' and contains(text(), 'Create')]");
+        createButton = $x("//div[contains(text(), 'Create')]");
     }
 
     public ShoppingPage createList() {
