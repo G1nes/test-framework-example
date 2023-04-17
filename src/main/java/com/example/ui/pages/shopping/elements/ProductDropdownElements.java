@@ -15,10 +15,9 @@ public class ProductDropdownElements {
     }
 
     private SelenideElement findProductElementByName(String productName) {
-        String elementNameXpath = ".//span[@data-testid='shopping-list-item-name']";
         return elements.asDynamicIterable()
                 .stream()
-                .filter(element -> productName.equals(element.$x(elementNameXpath).getText()))
+                .filter(element -> productName.equals(element.$x(".//span").getText()))
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException("Can't find product with name " + productName));
     }
