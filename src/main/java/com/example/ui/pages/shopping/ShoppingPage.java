@@ -20,7 +20,7 @@ public class ShoppingPage extends MenuPage {
     private final SelenideElement listDeletionNotificationPopup;
 
     public ShoppingPage() {
-        createShoppingListButton = $x("//a[@data-testid='create-new-shopping-list-button']/div[@class='s11251']");
+        createShoppingListButton = $x("//a[@data-testid='create-new-shopping-list-button']");
         addItemInput = $x("//input[@data-testid='desktop-add-item-autocomplete']");
         productsDropdown = new ProductsDropdown($x("//div[@data-testid='desktop-add-item-autocomplete']"));
         selectedProducts = new SelectedProductElements($$x("//div[@data-testid='shopping-list-item']"));

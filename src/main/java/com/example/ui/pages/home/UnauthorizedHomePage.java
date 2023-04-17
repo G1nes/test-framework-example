@@ -8,7 +8,7 @@ public class UnauthorizedHomePage {
     private final SelenideElement logInButton;
 
     public UnauthorizedHomePage() {
-        logInButton = $x("//div[@class='s11197' and contains(text(), 'Log In')]");
+        logInButton = $x("//div[contains(text(), 'Log In')]");
     }
 
     public SelectAuthorizationOptionWindow clickLogin(){

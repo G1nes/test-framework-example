@@ -8,7 +8,7 @@ public class ProductsDropdown {
 
     public ProductsDropdown(SelenideElement element) {
         dropdown = element;
-        productDropdownElements = new ProductDropdownElements(dropdown.$$x(".//div[@class='s12363']"));
+        productDropdownElements = new ProductDropdownElements(dropdown.$$x("./div/div"));
     }
 
     public void selectProductByName(String productName) {

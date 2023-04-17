@@ -11,7 +11,7 @@ public class SelectAuthorizationOptionWindow {
 
     public SelectAuthorizationOptionWindow() {
         emailPhoneInput = $x("//input[@data-testid='UI_KIT_INPUT' and @placeholder='Email or phone number']");
-        continueButton = $x("//div[@class='s11197' and contains(text(), 'Continue')]");
+        continueButton = $x("//div[contains(text(), 'Continue')]");
     }
 
     public SelectAuthorizationOptionWindow fillEmailOrPhoneNumber(String phoneNumber) {
